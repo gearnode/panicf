@@ -14,6 +14,10 @@
 
 package panicf // import "go.gearno.de/x/panicf"
 
-func Panic(fmt string, args ...any) {
-	panic(fmt.Errorf(fmt, args...))
+import (
+	"fmt"
+)
+
+func Panic(format string, arguments ...any) {
+	panic(fmt.Errorf(format, arguments...))
 }
